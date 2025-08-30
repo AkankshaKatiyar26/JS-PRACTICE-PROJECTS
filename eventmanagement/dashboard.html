@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dashboard
+        </title>
+        <style>
+            body{
+                background-image: url('ticket.jpg');
+                background-size: cover;
+            }
+            header{
+                color: white;
+                font-size:30px;
+                
+
+                background-image:url('stadium.jpg');
+                background-size: cover;
+                padding: 2px;
+               
+                font-weight: bolder;
+                text-align: center;
+
+            }
+            nav{
+                background-color: beige;
+                padding:15px;
+                text-align: center;
+             }
+             nav a{
+                padding: 15px;
+                font-weight: bold;
+                margin: 0 10px;
+                color: blueviolet;
+                font-weight: bolder;
+                font-size: 20px;
+                
+
+                
+                
+             }
+             nav a:hover{
+                color: red;
+                
+             }
+              .container {
+                background-image: url('ticket.jpg');
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+             .card{
+                text-align: center;
+                border:3px solid black;
+                border-radius: 4px;
+                display: inline-block;
+                padding:10px;
+                margin:20px;
+                width:250px;
+                box-shadow: 0 0 10px;
+                vertical-align: top;
+                
+
+             }
+             .card button{
+                font-weight: bolder;
+                background-color: beige;
+                color: blueviolet;
+             }
+             .card button:hover{
+                color:red;
+
+             }
+             .card h3{
+                font-size: 20px;
+
+             }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome</h1>
+            <p>You can do your bookings here...</p>
+        </header>
+        <nav>
+            <a>Home</a>
+            <a>View Events</a>
+            <a>Book Events</a>
+            <a>Profile</a>
+            <a>Logout</a>
+            
+
+        </nav>
+    
+        <div class="container">
+            <div class="card" style="background-image:url('front.jpg'); background-size: cover;">
+
+                <h3>Upcoming Events</h3>
+                <p>Check and register for upcoming events</p>
+                <button>View Events</button>
+            </div>
+            <div class="card" style="background-image:url('front.jpg'); background-size: cover;">
+                <h3>My Bookings</h3>
+                <p>See all your registered events </p>
+                <button>View Bookings</button>
+            </div>
+            <div class="card" style="background-image:url('front.jpg'); background-size: cover;" >
+                <h3>Edit Profile</h3>
+                <p>Update your personal information</p>
+                <button>Edit</button>
+            </div>
+        </div>
+    </body>
+</html>
