@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Test</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .button-status {
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-size: 18px;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click any mouse button!</h1>
+    <div class="button-status" id="left">Left Button: false</div>
+    <div class="button-status" id="middle">Middle Button: false</div>
+    <div class="button-status" id="right">Right Button: false</div>
+
+    <script>
+        const Input = {
+            mouse: { left: false, middle: false, right: false }
+        };
+
+        function updateDisplay() {
+            document.getElementById("left").innerText = "Left Button: " + Input.mouse.left;
+            document.getElementById("middle").innerText = "Middle Button: " + Input.mouse.middle;
+            document.getElementById("right").innerText = "Right Button: " + Input.mouse.right;
+        }
+
+        document.addEventListener("mousedown", function(event) {
+            switch(event.button) {
+                case 0: Input.mouse.left = true; break;
+                case 1: Input.mouse.middle = true; break;
+                case 2: Input.mouse.right = true; break;
+            }
+            updateDisplay();
+        });
+
+        document.addEventListener("mouseup", function(event) {
+            switch(event.button) {
+                case 0: Input.mouse.left = false; break;
+                case 1: Input.mouse.middle = false; break;
+                case 2: Input.mouse.right = false; break;
+            }
+            updateDisplay();
+        });
+
+        // Prevent right-click menu
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
